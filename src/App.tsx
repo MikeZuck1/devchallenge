@@ -1,8 +1,13 @@
 import "./App.css";
+import Title from "./components/Title";
+import Input from "./components/CustomInput";
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <div className="flex flex-col justify-center items-center h-[100vh]">
+        <Title />
+        <Input />
+      </div>
     </>
   );
 }

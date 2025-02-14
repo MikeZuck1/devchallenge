@@ -1,50 +1,95 @@
-# React + TypeScript + Vite
+```markdown
+# 📰 Newsletter Subscription Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A project based on a challenge where users can subscribe to a newsletter by entering their email.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
+- **React** (with [Vite](https://vitejs.dev/))  
+- **TailwindCSS** for styling  
+- **TypeScript** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Installation & Execution  
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 1️⃣ **Clone the project**  
+```bash
+git clone https://github.com/MikeZuck1/devchallenge.git
+cd devchallengenews
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2️⃣ **Install dependencies**  
+```bash
+npm install
+# or with Yarn
+yarn install
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### 3️⃣ **Run the project in development mode**  
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### 4️⃣ **Build for production**  
+```bash
+npm run build
+```
+
+---
+
+## 🛠️ **Project Structure**  
+The project uses **Vite** as the bundler, with a standard structure for a React project:
+
+```
+├── App.css
+├── App.tsx
+├── assets
+│   └── react.svg
+├── components
+│   ├── CustomInput.tsx
+│   ├── Title.tsx
+│   └── ui
+│       ├── button.tsx
+│       └── input.tsx
+├── index.css
+├── lib
+│   └── utils.ts
+├── main.tsx
+└── vite-env.d.ts
+```
+
+---
+
+## 🎨 **Using TailwindCSS**  
+Styling is fully handled with **TailwindCSS**. Here are some classes used:  
+- `bg-gray-50` → Background color  
+- `w-[25rem]` → Custom width  
+- `rounded-lg` → Rounded borders  
+- `text-center` → Centered text  
+
+📌 **Responsive Breakpoints**:  
+- `sm:` → From 640px  
+- `md:` → From 768px  
+- `lg:` → From 1024px  
+
+---
+
+## 💻 **Main Features**  
+✅ Controlled email input state  
+✅ Submit button  
+✅ Auto-clear input after submission  
+✅ Confirmation message after subscription  
+✅ Responsive design with TailwindCSS  
+
+---
+
+## 👥 **Contributors**  
+💡 **[Mike Batelahoko]** – Development & Design  
+
+👀 **Inspired by** [the original challenge](#)  
+
+---
+
+## 📜 **License**  
+This project is under the **MIT** license.  
 ```
